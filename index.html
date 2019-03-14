@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-signin-client_id" content="923096734869-2i2p9208oggdjqp9jjtim4fcakjpcv5p.apps.googleusercontent.com">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <!-- <link rel="stylesheet" href="https://google-developers.appspot.com/_static/7bb14d2951/css/devsite-cyan.css"> -->
+  <link rel="icon" href="shuffletube.png">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="googleauth.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <title>ShuffleTube</title>
+</head>
+<body>
+  <header>
+    <h2 id="navtitle">
+      ShuffleTube
+      <img src="shuffletube.png" alt="icon" id="logoimg">
+    </h2>
+    <nav>
+      <a id="reccomend-a"class="nav">Reccomended</a>
+      <a id="playlist-a" class="nav">Playlists<i class="material-icons arrow">arrow_drop_down</i></a>
+      <div id="nav-playlists">Unable to load playlists</div>
+      <a class="nav">Settings</a>
+    </nav>
+  </header>
+  <main>
+    <div id="overlay">
+      <div id="authorization-modal">
+        <h1>ShuffleTube</h1>
+        <p>Create and mix your YouTube playlists easily with good recommendations!</p>
+        <h2>Why Use ShuffleTube?</h2>
+        <ul>
+          <li>It's completely free, no premium!</li>
+          <li>There are no advertisements</li>
+          <li>You can download any songs for offline use</li>
+        </ul>
+        <button id="execute-request-button">Sign In</button>
+        <button id="revoke-access-button" style="display: none; margin-left: 25px">Revoke access</button>
+        <div id="auth-status" style="display: inline; padding-left: 25px"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script async defer src="https://apis.google.com/js/api.js"
+                onload="this.onload=function(){};handleClientLoad()"
+                onreadystatechange="if (this.readyState === 'complete') this.onload()">
+        </script>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
