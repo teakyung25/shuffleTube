@@ -1,0 +1,110 @@
+:root{
+  --bg-color: rgb(40,40,40);
+  --fg-color: rgb(60,60,60);
+  --fg-hov-color: rgb(50,50,50);
+  --fg-act-color: rgb(40,40,40);
+  --text-color: white;
+  --link-color: red;
+  --link-hov-color: rgb(225,00,00);
+  --link-act-color: rgb(205,00,00);
+}
+*{
+  color: var(--text-color);
+  font-family: 'Noto Sans', sans-serif;
+}
+html,body{
+  background-color: var(--bg-color);
+  margin: 0;
+}
+header{
+  float: left;
+  background-color: var(--fg-color);
+  position: sticky;
+  height: 100vh;
+  z-index: 2;
+}
+a{
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+a.nav{
+  display: block;
+  color: var(--text-color);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: background 0.1s;
+}
+a.nav:hover{
+  background-color: var(--fg-hov-color);
+}
+a.nav:active{
+  background-color: var(--fg-act-color);
+}
+#nav-playlists{
+  font-size: 14px;
+  margin: 10px;
+  margin-left: 20px;
+}
+#navtitle{
+  margin: 25px 5px;
+}
+#logoimg{
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  vertical-align: bottom;
+  position: relative;
+  top: 5px;
+}
+#overlay{
+  background-color: rgba(20,20,20,0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  position: relative;
+}
+i.material-icons{
+  vertical-align: bottom;
+  float: right;
+}
+i.material-icons.arrow{
+  transition: transform 0.5s;
+}
+i.material-icons.arrow.active{
+  transform: rotate(-180deg);
+}
+#execute-request-button{
+  background-color: var(--link-color);
+  border: 0 solid black;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: 0;
+  user-select: none;
+  transition: background 0.25s;
+}
+#execute-request-button:hover{
+  background-color: var(--link-hov-color);
+}
+#execute-request-button:active{
+  background-color: var(--link-act-color);
+}
+#authorization-modal{
+  z-index: 3;
+  background-color: var(--fg-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 16px;
+  width: 50%;
+  max-width: 100%;
+}
+.m0{
+  margin: 0;
+}
